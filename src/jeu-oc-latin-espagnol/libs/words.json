@@ -1,0 +1,26 @@
+{
+	"words": [
+		{ "fr": "Abeille", 	"oc": "Abèlha", "latin": "Apes", 		"espagnol": "e1", 	"image":"https://media1.tenor.com/m/ALl7dobUb58AAAAC/ah-denis.gif" },
+		{ "fr": "Aigle", 	"oc": "Agla", 	"latin": "Aquila", 		"espagnol": "e2", 	"image":"https://media1.tenor.com/m/ALl7dobUb58AAAAC/ah-denis.gif" },
+		{ "fr": "Araignée", "oc": "Aranha", "latin": "Aranea", 		"espagnol": "e3", 	"image":"https://media1.tenor.com/m/ALl7dobUb58AAAAC/ah-denis.gif" },
+		{ "fr": "Dauphin", 	"oc": "Dalfin", "latin": "Delphinus", 	"espagnol": "e4", 	"image":"https://media1.tenor.com/m/ALl7dobUb58AAAAC/ah-denis.gif" },
+		{ "fr": "Boeuf", 	"oc": "Buòu", 	"latin": "Bos", 		"espagnol": "e5", 	"image":"https://media1.tenor.com/m/ALl7dobUb58AAAAC/ah-denis.gif" },
+		{ "fr": "Chameau", 	"oc": "Camel", 	"latin": "Camelus",		"espagnol": "e6", 	"image":"https://media1.tenor.com/m/9zCgefg___cAAAAC/bane-no.gif" },
+		{ "fr": "Chat", 	"oc": "Cat", 	"latin": "Feles", 		"espagnol": "e7", 	"image":"https://media1.tenor.com/m/9zCgefg___cAAAAC/bane-no.gif" },
+		{ "fr": "Cheval", 	"oc": "Caval", 	"latin": "Equus", 		"espagnol": "e8", 	"image":"https://media1.tenor.com/m/9zCgefg___cAAAAC/bane-no.gif" },
+		{ "fr": "Chèvre", 	"oc": "Cabra", 	"latin": "???", 		"espagnol": "e9", 	"image":"https://media1.tenor.com/m/9zCgefg___cAAAAC/bane-no.gif" },
+		{ "fr": "Chien", 	"oc": "Gos", 	"latin": "Canis", 		"espagnol": "e10", 	"image":"https://media1.tenor.com/m/9zCgefg___cAAAAC/bane-no.gif" },
+		{ "fr": "Cigale", 	"oc": "Cigala", "latin": "Cicada", 		"espagnol": "e11", 	"image":"https://media1.tenor.com/m/-zNXGrsA7yEAAAAC/what-happened-what.gif" },
+		{ "fr": "Coq", 		"oc": "Gal", 	"latin": "Gallus", 		"espagnol": "e12", 	"image":"https://media1.tenor.com/m/-zNXGrsA7yEAAAAC/what-happened-what.gif" },
+		{ "fr": "Crabe", 	"oc": "Cranc", 	"latin": "Cancer", 		"espagnol": "e13", 	"image":"https://media1.tenor.com/m/-zNXGrsA7yEAAAAC/what-happened-what.gif" },
+		{ "fr": "Fourmi", 	"oc": "Formiga", "latin": "Formica", 	"espagnol": "e14", 	"image":"https://media1.tenor.com/m/-zNXGrsA7yEAAAAC/what-happened-what.gif" },
+		{ "fr": "Guêpe", 	"oc": "Vespa", 	"latin": "Vespa", 		"espagnol": "e15", 	"image":"https://media1.tenor.com/m/-zNXGrsA7yEAAAAC/what-happened-what.gif" },
+		{ "fr": "Huître", 	"oc": "Ustra", 	"latin": "Ostrea", 		"espagnol": "e16", 	"image":"https://media1.tenor.com/m/trALzbM4IAoAAAAC/yes-agree.gif" },
+		{ "fr": "Lezard", 	"oc": "Lauzèrt", "latin": "Lacerta", 	"espagnol": "e17", 	"image":"https://media1.tenor.com/m/trALzbM4IAoAAAAC/yes-agree.gif" },
+		{ "fr": "Goélan", 	"oc": "Gabian", "latin": "Gavia", 		"espagnol": "e18", 	"image":"https://media1.tenor.com/m/trALzbM4IAoAAAAC/yes-agree.gif" },
+		{ "fr": "Poule", 	"oc": "Galina", "latin": "Gallina",	 	"espagnol": "e19", 	"image":"https://media1.tenor.com/m/trALzbM4IAoAAAAC/yes-agree.gif" },
+		{ "fr": "Tortue", 	"oc": "Tortuga", "latin": "Testudo", 	"espagnol": "e20", 	"image":"https://media1.tenor.com/m/trALzbM4IAoAAAAC/yes-agree.gif" }
+	],
+	"nb_words": 5
+}
+

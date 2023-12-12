@@ -1,0 +1,107 @@
+#app {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+}
+#color-code {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    height: 32px;
+    margin: 32px;
+    border-radius: 16px;
+}
+#color-code > div {
+    height: 100%;
+}
+#color-code > div#spacer {
+    width: 32px;
+}
+#color-code > div.text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#color-code > div.text > p {
+    margin: 0;
+    font-weight: bold;
+}
+
+#color-code > #occitan {
+    border-radius: 12px 0 0 12px;
+    background-color: #ffd900;
+    padding-left: 8px;
+    color: #5e5e5e;
+}
+#color-code > #latin {
+    background-color: #004fc5;
+    padding-right: 8px;
+    padding-left: 8px;
+    color: #bebebe;
+
+}
+#color-code > #espagnol {
+    border-radius: 0 12px 12px 0;
+    background-color: #c60b1e;
+    padding-right: 8px;
+    color: #bebebe;
+}
+
+#card-zone {
+    display: grid;
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    gap: 8px;
+}
+
+.card-valid{
+    --valid-propag:2%;
+}
+.card {
+    --valid-propag:100%;
+    width: 96px;
+    height: 96px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, var(--color-pri), #666666 var(--propag),#666666 var(--valid-propag), #00aa00);
+    box-shadow: 0 1px 3px 0 rgba(102, 102, 102, .5), 0 1px 2px -1px rgba(102, 102, 102, .5); /* This shadow come from TailwindCSS class "shadow" */
+}
+.card-bg {
+    background-image: #666666;
+}
+.card-content {
+    margin: 0;
+}
+.hidden {
+    display: none;
+}
+.dialog {
+    border-radius: 16px;
+    border: transparent;
+    color:#acacac;
+    background-color: #666666;
+    box-shadow: 0 1px 3px 0 rgba(102, 102, 102, .5), 0 1px 2px -1px rgba(102, 102, 102, .5); /* This shadow come from TailwindCSS class "shadow" */
+
+}
+.dialog-img-container {
+    display: flex;
+    justify-content: center;
+    min-height: 30vh;
+    max-height: 70vh;
+    min-width: 30vw;
+}
+img#dialog-img {
+    object-fit: contain;
+    width: 100%;
+}
+.dialog-bottom-part {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

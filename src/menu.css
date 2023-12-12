@@ -1,0 +1,20 @@
+div#experiment-list {
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 49%);
+    gap: 8px;
+    justify-content: center;
+    justify-items: center;
+}
+div#experiment-list > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 225px;
+    border-radius: 16px;
+    border: 4px solid #666666;
+    color: #9e9e9e;
+    text-decoration: none;
+    text-align: center;
+}

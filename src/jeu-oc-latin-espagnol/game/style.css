@@ -40,7 +40,6 @@
     padding-right: 8px;
     padding-left: 8px;
     color: #bebebe;
-
 }
 #color-code > #espagnol {
     border-radius: 0 12px 12px 0;
@@ -56,19 +55,26 @@
     gap: 8px;
 }
 
-.card-valid{
-    --valid-propag:2%;
+.card-valid {
+    --valid-propag: 2%;
 }
 .card {
-    --valid-propag:100%;
+    --valid-propag: 100%;
     width: 96px;
     height: 96px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(180deg, var(--color-pri), #666666 var(--propag),#666666 var(--valid-propag), #00aa00);
-    box-shadow: 0 1px 3px 0 rgba(102, 102, 102, .5), 0 1px 2px -1px rgba(102, 102, 102, .5); /* This shadow come from TailwindCSS class "shadow" */
+    background-image: linear-gradient(
+        180deg,
+        var(--color-pri),
+        #666666 var(--propag),
+        #666666 var(--valid-propag),
+        #00aa00
+    );
+    box-shadow: 0 1px 3px 0 rgba(102, 102, 102, 0.5),
+        0 1px 2px -1px rgba(102, 102, 102, 0.5); /* This shadow come from TailwindCSS class "shadow" */
 }
 .card-bg {
     background-image: #666666;
@@ -80,12 +86,14 @@
     display: none;
 }
 .dialog {
+    position: absolute;
+    top: 8px;
     border-radius: 16px;
     border: transparent;
-    color:#acacac;
+    color: #acacac;
     background-color: #666666;
-    box-shadow: 0 1px 3px 0 rgba(102, 102, 102, .5), 0 1px 2px -1px rgba(102, 102, 102, .5); /* This shadow come from TailwindCSS class "shadow" */
-
+    box-shadow: 0 1px 3px 0 rgba(102, 102, 102, 0.5),
+        0 1px 2px -1px rgba(102, 102, 102, 0.5); /* This shadow come from TailwindCSS class "shadow" */
 }
 .dialog-img-container {
     display: flex;
@@ -104,4 +112,8 @@ img#dialog-img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#info-display {
+    margin-top: 8px;
+    text-align: center;
 }

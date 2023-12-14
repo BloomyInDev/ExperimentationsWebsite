@@ -17,15 +17,20 @@ export const shuffle_array = (array: any[]) => {
 
     return array;
 };
-export const wait =async (time: number) => {
-    return new Promise(resolve => setTimeout(resolve, time))
-}
+export const wait = async (time: number) => {
+    return new Promise((resolve) => setTimeout(resolve, time));
+};
+export const nb_words_from_URL = parseInt(
+    new URL(window.location.href).searchParams.get("nb_words") || ""
+);
+export const debug_enabled =
+    new URL(window.location.href).searchParams.get("debug_mode") == "TRUE";
 export interface WordsDisplayList {
     word: string;
-    lang: "occitan" | "espagnol" | "latin"|"fr";
+    lang: "occitan" | "espagnol" | "latin" | "fr";
     clicked: boolean;
-    solved: boolean
+    solved: boolean;
     idword: number;
     id: number;
-    element?: HTMLElement
+    element?: HTMLElement;
 }

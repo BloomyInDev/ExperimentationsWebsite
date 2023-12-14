@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <!--<link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jeu Memory Occitan-Latin-Espagnol</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <!--<link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu Memory Occitan-Latin-Espagnol</title>
-</head>
-
-<body>
-    <h1>Jeu Memory Occitan-Latin-Espagnol</h1>
-    <div id="app">
-        <div id="color-code">
-            <div id="occitan" class="text">
-                <p>Occitan</p>
-            </div>
-            <div id="spacer" style="
+    <body>
+        <h1>Jeu Memory Occitan-Latin-Espagnol</h1>
+        <div id="app">
+            <div id="color-code">
+                <div id="occitan" class="text">
+                    <p>Occitan</p>
+                </div>
+                <div
+                    id="spacer"
+                    style="
                         background-image: linear-gradient(
                             90deg,
                             #ffd900,
                             #004fc5
                         );
-                    "></div>
-            <div id="latin" class="text">
-                <p>Latin</p>
-            </div>
-            <div id="spacer" style="
+                    "
+                ></div>
+                <div id="latin" class="text">
+                    <p>Latin</p>
+                </div>
+                <div
+                    id="spacer"
+                    style="
                         background-image: linear-gradient(
                             90deg,
                             #004fc5,
                             #c60b1e
                         );
-                    "></div>
-            <div id="espagnol" class="text">
-                <p>Français</p>
+                    "
+                ></div>
+                <div id="espagnol" class="text">
+                    <p>Français</p>
+                </div>
             </div>
+            <div id="card-zone"></div>
+            <dialog id="response-box" class="dialog"></dialog>
+            <div id="info-display">
+                Nombre d'essai :
+                <a id="score-display"></a>
+                <br />
+                Temps passé :
+                <a id="time-display"></a>
+            </div>
+            <!--<button id="btn-show-nb-clicked">Show nb clicked</button>-->
         </div>
-        <div id="card-zone"></div>
-        <dialog id="response-box" class="dialog">
-            
-        </dialog>
-        <button id="btn-show-nb-clicked">Show nb clicked</button>
-    </div>
-    <script type="module" src="./game.ts"></script>
-</body>
-
+        <script type="module" src="./game.ts"></script>
+    </body>
 </html>

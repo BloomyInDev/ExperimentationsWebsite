@@ -26,7 +26,12 @@ const update_timer = () => {
         difference = time_now - start_time,
         seconds_total = difference / 1000,
         minutes = Math.floor(seconds_total / 60),
-        seconds = seconds_total - minutes;
+        seconds = seconds_total - minutes * 60;
+    if (seconds == 60) {
+        // When the seconds are at 60, minutes are -1 where they need to be so seconds = 0 and timer is minutes+1:0
+        seconds = 0;
+        minutes++;
+    }
     const e = document.getElementById("time-display") as HTMLBaseElement;
     e.innerText = `${minutes.toFixed(0)}:${seconds.toFixed(0)}`; //`${minutes.toFixed(0)}:${seconds.toFixed(0)}`;
     return [minutes.toFixed(0), seconds.toFixed(0)];

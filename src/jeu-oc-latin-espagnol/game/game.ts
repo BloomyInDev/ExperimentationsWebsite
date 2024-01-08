@@ -183,9 +183,11 @@ card_preparation.forEach((card_data) => {
             const list_lang_selected = list_selected.map((e) => e.lang);
             if (list_lang_selected.includes(card_data.lang)) {
                 list_selected.forEach((card) => {
-                    if (card.lang == card_data.lang) {
-                        card.clicked = !card.clicked;
-                        update_card_status(card.id);
+                    if (card.id != card_data.id) {
+                        if (card.lang == card_data.lang) {
+                            card.clicked = !card.clicked;
+                            update_card_status(card.id);
+                        }
                     }
                 });
                 console.log("Switching the one clicked");

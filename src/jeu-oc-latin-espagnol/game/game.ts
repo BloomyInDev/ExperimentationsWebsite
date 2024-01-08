@@ -33,8 +33,24 @@ const update_timer = () => {
         minutes++;
     }
     const e = document.getElementById("time-display") as HTMLBaseElement;
-    e.innerText = `${minutes.toFixed(0)}:${seconds.toFixed(0)}`; //`${minutes.toFixed(0)}:${seconds.toFixed(0)}`;
+    e.innerText = `${minutes.toFixed(0)}:${"0".repeat(
+        Math.abs(seconds.toFixed(0).length - 2)
+    )}${seconds.toFixed(0)}`; //`${minutes.toFixed(0)}:${seconds.toFixed(0)}`;
     return [minutes.toFixed(0), seconds.toFixed(0)];
+};
+const update_card_status = (card_id: number) => {
+    const card_data = card_preparation[card_id];
+    if (card_data.clicked) {
+    }
+    const card_content = card_data.element as HTMLElement;
+    const card_content_child = card_content.firstChild as HTMLElement;
+    card_content_child.classList.remove("hidden");
+    if (card_data.clicked) {
+        card_content.style.setProperty("--propag", "40%");
+    } else {
+        card_content_child.classList.add("hidden");
+        card_content.style.setProperty("--propag", "25%");
+    }
 };
 let canInteract = true,
     score = 0;
@@ -161,16 +177,23 @@ card_preparation.forEach((card_data) => {
     // Add Click interaction
     card.addEventListener("click", (_ev) => {
         if (!card_data.solved && canInteract) {
+            const list_selected = card_preparation.filter(
+                (card_data) => card_data.clicked
+            );
+            const list_lang_selected = list_selected.map((e) => e.lang);
+            if (list_lang_selected.includes(card_data.lang)) {
+                list_selected.forEach((card) => {
+                    if (card.lang == card_data.lang) {
+                        card.clicked = !card.clicked;
+                        update_card_status(card.id);
+                    }
+                });
+                console.log("Switching the one clicked");
+            }
             card_data.clicked = !card_data.clicked;
             update_nb_clicked();
             //console.log({ nb: nb_clicked, who: card_preparation.filter(card => card.clicked) });
-            card_content.classList.remove("hidden");
-            if (card_data.clicked) {
-                card.style.setProperty("--propag", "40%");
-            } else {
-                card_content.classList.add("hidden");
-                card.style.setProperty("--propag", "25%");
-            }
+            update_card_status(card_data.id);
             if (nb_clicked == 3) {
                 window.dispatchEvent(compare_words_event);
             }

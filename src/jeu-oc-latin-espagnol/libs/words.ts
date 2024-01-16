@@ -25,10 +25,8 @@ for (let i = 0; i < selected_words.length; i++) {
         id: card_preparation.length,
     });
     card_preparation.push({
-        word: word.fr,
-        lang: "fr",
-        //word: word.espagnol,
-        //lang: "espagnol",
+        word: word.espagnol,
+        lang: "espagnol",
         clicked: false,
         solved: false,
         idword: i,

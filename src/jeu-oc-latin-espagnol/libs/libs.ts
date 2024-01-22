@@ -34,3 +34,7 @@ export interface WordsDisplayList {
     id: number;
     element?: HTMLElement;
 }
+export const prefetch_image = (img_url: string) => {
+    const img = new Image();
+    img.src = img_url;
+};

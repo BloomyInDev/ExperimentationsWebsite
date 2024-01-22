@@ -99,6 +99,7 @@
 .dialog-img-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     min-height: 30vh;
     max-height: 70vh;
     min-width: 30vw;
@@ -106,6 +107,7 @@
 img#dialog-img {
     object-fit: contain;
     width: 100%;
+    height: 100%;
 }
 .dialog-bottom-part {
     display: flex;
@@ -113,6 +115,13 @@ img#dialog-img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.dialog-bottom-part > a {
+    color: #ffffff;
+    text-decoration-line: none;
+}
+.dialog-bottom-part > p {
+    margin: 0;
 }
 #info-display {
     margin-top: 8px;

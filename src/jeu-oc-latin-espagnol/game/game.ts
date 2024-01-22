@@ -3,9 +3,14 @@ import "../../style.css";
 import {
     card_preparation,
     francais_translation,
-    img_list,
+    img_data,
 } from "../libs/words";
-import { wait, nb_words_from_URL, debug_enabled as debug } from "../libs/libs";
+import {
+    wait,
+    nb_words_from_URL,
+    debug_enabled as debug,
+    prefetch_image,
+} from "../libs/libs";
 
 let nb_clicked = card_preparation.filter(
     (card_data) => card_data.clicked
@@ -104,7 +109,9 @@ window.addEventListener("compare_words", async () => {
         // Setting up the dialog box
         let prepared_dialog_html = `<div class="dialog-img-container"><img id="dialog-img" alt="Une image de ${
             francais_translation[clicked_cards[0].idword]
-        }"></div><div class="dialog-bottom-part"><p>Cela veut dire: ${
+        }"></div><div class="dialog-bottom-part"><a href="${
+            img_data[clicked_cards[0].idword].mention
+        }" target="_blank">Image provenant d'Unsplash</a><p>Cela veut dire: ${
             francais_translation[clicked_cards[0].idword]
         }</p>`;
 
@@ -134,7 +141,7 @@ window.addEventListener("compare_words", async () => {
             body_element.classList.remove("blur");
         });
         (document.getElementById("dialog-img") as HTMLImageElement).src =
-            img_list[clicked_cards[0].idword];
+            img_data[clicked_cards[0].idword].img;
 
         // Show the dialog box
         dialog_box.show();
@@ -214,3 +221,9 @@ document.getElementById("btn-show-nb-clicked")?.addEventListener("click", () =>
 );
 let time_updater = setInterval(update_timer, 1000);
 update_score(score);
+card_preparation
+    .map((card) => card.idword)
+    .filter((value, index, array) => array.indexOf(value) === index)
+    .forEach((word_id) => {
+        prefetch_image(img_data[word_id].img);
+    });

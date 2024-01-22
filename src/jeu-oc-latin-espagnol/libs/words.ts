@@ -60,4 +60,8 @@ if (debug_enabled) {
 }
 
 export const img_list = words.map((word) => word.image);
+export const img_data = words.map((word) => ({
+    img: word.image,
+    mention: word.mention,
+}));
 export let francais_translation = words.map((word) => word.fr);

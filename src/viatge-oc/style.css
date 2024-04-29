@@ -1,0 +1,35 @@
+body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+            "Liberation Mono", "Courier New", monospace;
+    background: #353535;
+    margin: 0;
+    color: #ffffff;
+}
+img {
+    display: inline;
+    max-width: 50%;
+    aspect-ratio: 4/3;
+}
+/*
+.rotate-1 {
+    rotate: -5deg;
+}
+.rotate1 {
+    rotate: 5deg;
+}*/
+#content{
+    display: flex;
+    margin-top: 1rem;
+}
+#content > div {
+    width: 48vw;
+}
+.t {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.r {
+    flex-direction: row-reverse;
+}

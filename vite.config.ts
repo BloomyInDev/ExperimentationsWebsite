@@ -8,8 +8,22 @@ export default defineConfig({
     build: {
         outDir: resolve(__dirname, "dist"),
         emptyOutDir: true,
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, "src/index.html"),
+                oc_latin_espagnol_game_menu: resolve(
+                    __dirname,
+                    "src/jeu-oc-latin-espagnol/index.html"
+                ),
+                oc_latin_espagnol_game: resolve(
+                    __dirname,
+                    "src/jeu-oc-latin-espagnol/game/index.html"
+                ),
+                viatge_oc: resolve(__dirname,"src/viatge-oc/index.html")
+            },
+        },
     },
-    server:{
-        port:3333
-    }
+    server: {
+        port: 3333,
+    },
 });

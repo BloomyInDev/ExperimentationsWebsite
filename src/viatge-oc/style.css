@@ -1,35 +1,84 @@
 body {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-            "Liberation Mono", "Courier New", monospace;
+        "Liberation Mono", "Courier New", monospace;
     background: #353535;
     margin: 0;
     color: #ffffff;
+    overflow-x: hidden;
 }
 img {
-    display: inline;
-    max-width: 50%;
-    aspect-ratio: 4/3;
+    max-width: 12vw;
+    aspect-ratio: 4/3 !important;
+    object-fit: contain;
 }
-/*
-.rotate-1 {
-    rotate: -5deg;
+
+#btn {
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    bottom: 1rem;
+    right: 1rem;
+    background: gray;
 }
-.rotate1 {
-    rotate: 5deg;
-}*/
-#content{
+
+#page {
     display: flex;
-    margin-top: 1rem;
+    flex-direction: column;
+    gap: 8px;
 }
-#content > div {
-    width: 48vw;
+#page > div {
+    min-height: 100vh;
 }
-.t {
+.content {
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    filter: blur(2rem);
+
+    transition: all 2s;
+}
+.from-left {
+    transform: translateX(-200%);
+}
+.from-right {
+    transform: translateX(200%);
+}
+.not-moving,
+.show {
+    filter: blur(0) !important;
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}
+@media (prefers-reduced-motion) {
+    .content {
+        transition: none;
+    }
+}
+
+.zone {
     display: flex;
-    width: 100%;
+    justify-items: center;
+    place-items: center;
+    min-width: 90vw;
+    min-height: 50vh;
+}
+.zone > div {
+    display: flex;
+    flex: 1 1 0%;
     justify-content: center;
-    align-items: center;
+    font-size: 2rem;
+    width: 30vw;
+    width: fit-content;
 }
-.r {
-    flex-direction: row-reverse;
+.zone > div:has(p) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.zone > div > p:first {
+    font-size: 4rem;
+    text-wrap: nowrap;
+}
+.zone > div > img {
+    min-width: 100%;
 }
